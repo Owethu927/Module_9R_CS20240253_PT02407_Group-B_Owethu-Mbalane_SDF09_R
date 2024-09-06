@@ -12,6 +12,9 @@ let message = ""
 let messageEl = document.getElementById("message-el") // Created a variable to change the way the massage is asked//
 console.log(messageEl)
 
+// creating an array//
+let cards = [firstCard, secondCard]
+
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
 
@@ -23,7 +26,7 @@ function startGame() {
 
 // creating the button function//
 function renderGame() { // changed the stardGame to renderGame
-    cardsEl.textContent = "Cards: " + firstCard + "" + secondCard
+    cardsEl.textContent = "Cards: " + cards[0] + "" + cards[1] // channged the firstCard and secondCard to match the array layout//
     sumEl.textContent = "Sum" + sum
     if (sum < 21) {
         message ="Do you want to draw a new card?"
