@@ -1,33 +1,24 @@
-// 1. Create two variables, firstCard and secondCard. 
-// Set their values to a random number between 2-11
-
-// 2. Create a variable, sum, and set it to the sum of the two cards
-
-let firstCard = getRandomCard() //Changed the number to the get random card//
-let secondCard = getRandomCard()
-let sum = firstCard + secondCard
+//creating an object to store player data//
+let player = {
+    name: "Owethu",
+    chips:145
+}
+let cards = []
+let sum = 0
 let hasBlackJack = false
-let isAlive = true
+let isAlive = false
 let message = ""
 let messageEl = document.getElementById("message-el") // Created a variable to change the way the massage is asked//
-console.log(messageEl)
-
-// creating an array//
-let cards = [firstCard, secondCard]
-
 let sumEl = document.getElementById("sum-el")
-let cardsEl = document.getElementById("cards-el")
+let cardsEl = document.getElementById("cards-el")//creating an object to store player data//
+let playerEl = document.getElementById("player-el")
 
-//creating a new fuction that will be called startGame() that will call renderGame//
-
-function startGame() {
-    renderGame()
-} 
+player.textContent = player.name + ": R" + player.chips
 
 //Creating a new function to be able to get random numbers
 function getRandomCard() {
-    let randomNumber = Math.floor(Math.random()*13) + 1
-    if (randomNumber >10) {
+    let randomNumber = Math.floor( Math.random()*13) + 1
+    if (randomNumber > 10) {
         return 10
     } else if (randomNumber === 1) {
         return 11
@@ -35,6 +26,19 @@ function getRandomCard() {
         return randomNumber
     }
 }
+
+//creating a new fuction that will be called startGame() that will call renderGame//
+
+function startGame() {
+    let isAlive = true
+    let firstCard = getRandomCard() //Changed the number to the get random card//
+    let secondCard = getRandomCard()
+    sum = firstCard + secondCard // creating an array//
+    cards = [firstCard, secondCard]
+    renderGame()
+
+} 
+
 
 // creating the button function//
 function renderGame() { // changed the stardGame to renderGame
