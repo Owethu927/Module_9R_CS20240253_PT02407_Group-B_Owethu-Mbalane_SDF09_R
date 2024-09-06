@@ -33,5 +33,9 @@ function startGame() {
     messageEl.textContent = message
 }
 
+// Creating a second function for the second button//
+function newCard() {
+    console.log("Draw a new card from the deck!")
+}
 
 
