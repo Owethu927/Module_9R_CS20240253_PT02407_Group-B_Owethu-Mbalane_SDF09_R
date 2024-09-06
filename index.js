@@ -9,12 +9,17 @@ let sum = firstCard + secondCard
 let hasBlackJack = false
 let isAlive = true
 let message = ""
-
 let messageEl = document.getElementById("message-el") // Created a variable to change the way the massage is asked//
 console.log(messageEl)
 
+let sumEl = document.getElementById("sum-el")
+let cardsEl = document.getElementById("cards-el")
+
+
 // creating the button function//
 function startGame() {
+    cardsEl.textContent = "Cards: " + firstCard + "" + secondCard
+    sumEl.textContent = "Sum" + sum
     if (sum < 21) {
         message ="Do you want to draw a new card?"
     } else if (sum === 21) {
