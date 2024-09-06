@@ -15,9 +15,14 @@ console.log(messageEl)
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
 
+//creating a new fuction that will be called startGame() that will call renderGame//
+
+function startGame() {
+    renderGame()
+}
 
 // creating the button function//
-function startGame() {
+function renderGame() { // changed the stardGame to renderGame
     cardsEl.textContent = "Cards: " + firstCard + "" + secondCard
     sumEl.textContent = "Sum" + sum
     if (sum < 21) {
