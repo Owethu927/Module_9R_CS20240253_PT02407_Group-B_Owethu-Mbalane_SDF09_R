@@ -26,7 +26,12 @@ function startGame() {
 
 //Creating a new function to be able to get random numbers
 function getRandomCard() {
-    return 5
+    let randomNumber = Math.floor(Math.random()*13) + 1
+    if (randomNumber >10) {
+        return 10
+    } else {
+        return randomNumber
+    }
 }
 
 // creating the button function//
