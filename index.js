@@ -59,11 +59,17 @@ function renderGame() { // changed the stardGame to renderGame
 // Creating a second function for the second button//
 function newCard() {
     console.log("Draw a new card from the deck!")
-
-    let card = getRandomCard()
+  
+    //added some restictions to only trigger new card//
+    if (isAlive === true && hasBlackJack === false) {
+        let card = getRandomCard()
     sum += card
     cards.push(card) // Added an array to the new card //
     startGame()
 }
+
+    }
+
+    
 
 
