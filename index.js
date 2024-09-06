@@ -3,8 +3,8 @@
 
 // 2. Create a variable, sum, and set it to the sum of the two cards
 
-let firstCard = 6
-let secondCard = 9
+let firstCard = getRandomCard() //Changed the number to the get random card//
+let secondCard = getRandomCard()
 let sum = firstCard + secondCard
 let hasBlackJack = false
 let isAlive = true
@@ -22,6 +22,11 @@ let cardsEl = document.getElementById("cards-el")
 
 function startGame() {
     renderGame()
+} 
+
+//Creating a new function to be able to get random numbers
+function getRandomCard() {
+    return 5
 }
 
 // creating the button function//
@@ -48,7 +53,7 @@ function renderGame() { // changed the stardGame to renderGame
 function newCard() {
     console.log("Draw a new card from the deck!")
 
-    let card = 6
+    let card = getRandomCard()
     sum += card
     cards.push(card) // Added an array to the new card //
     startGame()
