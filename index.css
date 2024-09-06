@@ -4,4 +4,13 @@ h1 {
 
 body {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url(./images/table.png);
+    background-size: cover;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+#message-el {
+    font-style: italic;
 }
