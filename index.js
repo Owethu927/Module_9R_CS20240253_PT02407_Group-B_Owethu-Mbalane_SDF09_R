@@ -13,7 +13,7 @@ let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")//creating an object to store player data//
 let playerEl = document.getElementById("player-el")
 
-player.textContent = player.name + ": R" + player.chips
+playerEl.textContent = player.name + ": R" + player.chips
 
 //Creating a new function to be able to get random numbers
 function getRandomCard() {
@@ -30,7 +30,7 @@ function getRandomCard() {
 //creating a new fuction that will be called startGame() that will call renderGame//
 
 function startGame() {
-    let isAlive = true
+    isAlive = true
     let firstCard = getRandomCard() //Changed the number to the get random card//
     let secondCard = getRandomCard()
     sum = firstCard + secondCard // creating an array//
@@ -42,34 +42,33 @@ function startGame() {
 
 // creating the button function//
 function renderGame() { // changed the stardGame to renderGame
-
+    cardsEl.textContent = "Cards: "
     for (let i=0; i < cards.length; i++) {
         cardsEl.textContent += cards[i] + " " //added a loop to space out the numbers//
     }
-    sumEl.textContent = "Sum" + sum
-    if (sum < 21) {
+    sumEl.textContent = "Sum:" + sum
+    if (sum <= 20) {
         message ="Do you want to draw a new card?"
     } else if (sum === 21) {
-        massage ="You've got Blackjack!"
+        message ="You've got Blackjack!"
         hasBlackJack = true
-    } else{
+    } else {
         message ="You're out of the game"
         isAlive = false
     }
-    
+
     messageEl.textContent = message
 }
 
 // Creating a second function for the second button//
 function newCard() {
-    console.log("Draw a new card from the deck!")
-  
+   
     //added some restictions to only trigger new card//
     if (isAlive === true && hasBlackJack === false) {
         let card = getRandomCard()
     sum += card
     cards.push(card) // Added an array to the new card //
-    startGame()
+    renderGame()
 }
 
     }
