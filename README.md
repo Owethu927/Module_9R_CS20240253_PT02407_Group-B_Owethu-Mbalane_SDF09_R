@@ -61,3 +61,7 @@ Once you've completed and tested your Blackjack game:
 
 ### Happy Coding!
 Dive into game development with this project. Enjoy learning, applying your knowledge, and overcoming challenges along the way!
+
+
+loom video link:
+https://www.loom.com/share/d90f69d1b3e34bd087bd623059e906c4
